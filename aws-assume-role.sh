@@ -1,27 +1,32 @@
+#!/bin/bash
+
 RED='\033[0;31m'
 YELLOW='\033[33m'
 RESET='\033[0m'
 
 assumeRole () {
-
    # 1. save previous keys
    export PREV_AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
    export PREV_AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
    export PREV_AWS_SESSION_TOKEN=${AWS_SESSION_TOKEN}
 
-   unset AWS_ACCESS_KEY_ID
-   unset AWS_SECRET_ACCESS_KEY
-   unset AWS_SESSION_TOKEN
-
    # 2. assume role arn with external id
-
    echo -e "${YELLOW}...assuming role ${1} with external id ${2}... ${RESET}"
    role_session_name=_${CI_PIPELINE_IID:-local}
-   temp_role=$(aws sts assume-role \
-                     --role-arn "$1" \
-                     --role-session-name "$role_session_name" \
-                     --external-id "$2" \
-                     --duration-seconds 3600 )
+   if [ -n "$2" ]
+   then
+      temp_role=$(aws sts assume-role \
+                  --role-arn "$1" \
+                  --role-session-name "$role_session_name" \
+                  --external-id "$2" \
+                  --duration-seconds 3600 )
+   elif [ -n "$1" ]
+   then
+      temp_role=$(aws sts assume-role \
+                  --role-arn "$1" \
+                  --role-session-name "$role_session_name" \
+                  --duration-seconds 3600 )
+   fi
 
    if [[ $? != 0 ]]; then
       echo -e "${RED}Failed to assume role $1 ${RESET}"

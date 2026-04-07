@@ -43,6 +43,23 @@ Apply the changes to the home directory:
 chezmoi apply
 ```
 
+#### Important chezmoi workflow note
+
+Managed files should be edited with chezmoi, not directly in `$HOME`.
+
+Examples:
+
+```bash
+chezmoi edit ~/.zshrc
+chezmoi edit ~/.zprofile
+chezmoi edit ~/.config/nvim/init.lua
+chezmoi apply
+```
+
+If you edit a managed file directly in your home directory, a later `chezmoi apply` may overwrite your changes.
+That will save future-you some frustration.
+
+
 Add a new file to be managed:
 
 ```bash

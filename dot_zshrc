@@ -16,6 +16,8 @@ autoload -Uz compinit bashcompinit
 compinit
 bashcompinit
 
+autoload -U select-word-style
+select-word-style bash
 
 # ---- Core CLI integrations ----
 

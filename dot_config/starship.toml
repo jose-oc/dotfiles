@@ -1,0 +1,28 @@
+add_newline = false
+
+format = "$directory$git_branch$git_status$python$golang$terraform$kubernetes$character"
+
+[directory]
+truncate_to_repo = true
+
+[git_branch]
+symbol = "git:"
+
+[python]
+symbol = "py:"
+
+[golang]
+symbol = "go:"
+
+[terraform]
+symbol = "tf:"
+
+[kubernetes]
+disabled = false
+
+[aws]
+disabled = true
+
+[gcloud]
+disabled = true
+

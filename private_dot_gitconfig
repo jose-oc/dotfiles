@@ -1,0 +1,65 @@
+[user]
+	name = Jose Ortiz
+	email = jortiz@nepgroup.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	ci = commit
+	st = status --short --branch
+	qlog = !git --no-pager log --oneline -n 10 --decorate
+	glog = !git --no-pager log --oneline -n 10 --decorate --graph
+	hist = !git log --pretty=format:\"%C(yellow)%h%Creset (%ai) %C(cyan)%d%Creset %s %C(green)[%an]%Creset\" --graph --date=short
+	qhist = !git --no-pager log -n 10 --pretty=format:\"%C(yellow)%h%Creset (%ai) %C(cyan)%d%Creset %s %C(green)[%an]%Creset\" --graph --date=short
+	gone = ! "git fetch --prune && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
+	lg = log --graph --decorate --oneline --all
+	last = log -1 --stat
+	unstage = restore --staged --
+	co = switch
+	cob = switch -c
+	br = branch --sort=-committerdate
+	df = diff
+	ds = diff --staged
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore
+	editor = nvim
+	pager = delta
+[branch]
+	autosetuprebase = always
+[branch "main"]
+        rebase = true
+[branch "master"]
+	rebase = true
+[push]
+	default = current
+	autoSetupRemote = true
+[pull]
+	rebase = false
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[rebase]
+	autoStash = true
+[merge]
+	conflictStyle = zdiff3
+[diff]
+	colorMoved = zebra
+[rerere]
+	enabled = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+	side-by-side = false

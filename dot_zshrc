@@ -83,11 +83,10 @@ if (( ${+commands[starship]} )); then
   eval "$(starship init zsh)"
 fi
 
-# ---- Aliases ----
+
 [ -f "$HOME/.config/zsh/functions.zsh" ] && source "$HOME/.config/zsh/functions.zsh"
 [ -f "$HOME/.config/zsh/aliases.zsh" ] && source "$HOME/.config/zsh/aliases.zsh"
 
-# ---- Aliases end ----
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/jose/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jose/google-cloud-sdk/path.zsh.inc'; fi
@@ -95,4 +94,14 @@ if [ -f '/Users/jose/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/jose/googl
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/jose/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/jose/google-cloud-sdk/completion.zsh.inc'; fi
 
+# History
+HISTFILE=~/.zsh_history
+HISTSIZE=100000
+SAVEHIST=100000
+
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
 

@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# Iterate over all .mp4 files in the current directory
+for f in *.mp4; do
+  # Skip files that already have the -LLM suffix to avoid re-processing
+  if [[ "$f" == *-LLM.mp4 ]]; then
+    continue
+  fi
+
+  echo "Processing: $f..."
+
+  ffmpeg -i "$f" \
+    -vf "scale='if(gt(iw,ih),-2,720)':'if(gt(iw,ih),720,-2)',fps=30" \
+    -c:v libx264 -crf 25 -preset faster \
+    -an -map_metadata -1 \
+    -y "${f%.mp4}-LLM.mp4"
+done
+
+echo "Finished! All videos are ready for AI analysis."
+

@@ -2,3 +2,71 @@
 
 Review the project https://dotfiles.github.io/ 
 and the bootstrap https://github.com/thoughtbot/dotfiles
+
+## Using chezmoi
+
+This repository is managed with chezmoi.
+
+### Initial setup on a new machine
+
+Install Homebrew first, then install chezmoi:
+
+```bash
+brew install chezmoi
+```
+
+Initialize and apply this repo:
+
+```bash
+chezmoi init --apply git@github.com:jose-oc/dotfiles.git
+```
+
+### Daily workflow
+
+Check for differences between the source state and the home directory:
+
+```bash
+chezmoi diff
+```
+
+Edit a managed file:
+
+```bash
+chezmoi edit ~/.zshrc
+chezmoi edit ~/.zprofile
+chezmoi edit ~/.gitconfig
+```
+
+Apply the changes to the home directory:
+
+```bash
+chezmoi apply
+```
+
+Add a new file to be managed:
+
+```bash
+chezmoi add ~/.config/nvim
+chezmoi add ~/Brewfile
+```
+
+### Git workflow
+
+The chezmoi source directory lives here:
+
+```bash
+~/.local/share/chezmoi
+```
+
+Commit and push changes from there:
+
+```bash
+cd ~/.local/share/chezmoi
+git status
+git add .
+git commit -m "Update dotfiles"
+git push
+```
+
+
+

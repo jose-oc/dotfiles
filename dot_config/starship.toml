@@ -1,6 +1,6 @@
-add_newline = false
+add_newline = true 
 
-format = "$directory$git_branch$git_status$python$golang$terraform$kubernetes$character"
+# format = "$directory$git_branch$git_status$python$golang$terraform$kubernetes$character"
 
 [directory]
 truncate_to_repo = true
@@ -25,4 +25,12 @@ disabled = true
 
 [gcloud]
 disabled = true
+
+[cmd_duration]
+min_time = 3_000
+format = "took [$duration]($style) "
+
+[status]
+disabled = false
+format = '[✖ $status]($style) '
 

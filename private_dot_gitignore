@@ -17,6 +17,7 @@ ehthumbs_vista.db
 *.code-workspace
 .venv/
 phpunit.phar
+.envrc
 
 # AI
 WARP.md

@@ -6,6 +6,18 @@ bindkey "^[f" forward-word
 bindkey "^[[1;3D" backward-word
 bindkey "^[[1;3C" forward-word
 
+# Home / End (common terminal sequences)
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
+# Also handle some terminals/keyboards that send these variants
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[[7~" beginning-of-line
+bindkey "^[[8~" end-of-line
+
+# Forward Delete key
+bindkey "^[[3;3~" kill-word
 
 export EDITOR="nvim"
 export VISUAL="nvim"

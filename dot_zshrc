@@ -119,3 +119,6 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 
+
+# Added by Antigravity
+export PATH="/Users/jose/.antigravity/antigravity/bin:$PATH"

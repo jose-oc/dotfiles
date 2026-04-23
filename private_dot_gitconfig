@@ -23,7 +23,6 @@
 	ds = diff --staged
 [core]
 	autocrlf = input
-	excludesfile = ~/.gitignore
 	editor = nvim
 	pager = delta
 [branch]

@@ -19,6 +19,16 @@ bindkey "^[[8~" end-of-line
 # Forward Delete key
 bindkey "^[[3;3~" kill-word
 
+# Alt + Backspace (common)
+bindkey '^[^?' backward-kill-word
+
+# Some terminals send this
+bindkey '^[\x7f' backward-kill-word
+
+# Another variation
+bindkey '^H' backward-delete-char
+
+
 export EDITOR="nvim"
 export VISUAL="nvim"
 

@@ -15,6 +15,13 @@ Install Homebrew first, then install chezmoi:
 brew install chezmoi
 ```
 
+Create a file with the custom data for your machine:
+```bash
+❯ cat ~/.config/chezmoi/chezmoi.toml
+[data]
+  email = "jose@mail.com"
+```
+
 Initialize and apply this repo:
 
 ```bash

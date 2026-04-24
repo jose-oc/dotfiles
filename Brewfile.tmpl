@@ -1,0 +1,57 @@
+tap "derailed/k9s"
+
+brew "asciinema"
+brew "awscli"
+brew "bash-language-server"
+brew "bat"
+brew "chezmoi"
+brew "direnv"
+brew "eza"
+brew "fd"
+brew "fzf"
+brew "gh"
+brew "git-delta"
+brew "glow"
+brew "go"
+brew "gopls"
+brew "lua-language-server"
+brew "neovim"
+brew "prettier"
+brew "ripgrep"
+brew "rsync"
+brew "starship"
+brew "stylua"
+brew "uv"
+brew "yaml-language-server"
+brew "zoxide"
+
+# Work-only (Kubernetes stack)
+{{ if eq .profile "work" }}
+brew "helm@3", link: true
+brew "kubectx"
+brew "kubernetes-cli"
+brew "terraform-ls"
+brew "lima"
+brew "derailed/k9s/k9s"
+cask "1password-cli"
+cask "freelens"
+
+# Equivalent to `uv tool install --python 3.14 --with-executables-from ansible-core,ansible-lint ansible`
+uv "ansible", with: ["ansible-core", "ansible-lint"]
+{{ end }}
+
+{{ if eq .profile "personal" }}
+cask "utm"
+{{ end }}
+
+# Casks for all machines
+cask "font-hack-nerd-font"
+cask "ghostty"
+cask "maccy"
+cask "obsidian"
+
+vscode "github.copilot-chat"
+
+# Equivalent to `uv tool install basedpyright` used by Neovim LSP
+uv "basedpyright"
+uv "ruff"

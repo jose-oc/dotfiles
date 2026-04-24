@@ -19,8 +19,11 @@ Create a file with the custom data for your machine:
 ```bash
 ❯ cat ~/.config/chezmoi/chezmoi.toml
 [data]
+  profile = "personal"
   email = "jose@mail.com"
 ```
+
+Depending on the profile you'll have different brew packages installed, at the moment we support 'work' and 'personal' profiles. 
 
 Initialize and apply this repo:
 

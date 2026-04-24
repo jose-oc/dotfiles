@@ -1,32 +1,26 @@
+# Word style
+autoload -U select-word-style
+select-word-style bash
+
 # Word navigation
 bindkey "^[b" backward-word
 bindkey "^[f" forward-word
 
-# Arrow-based word navigation (iTerm sends these)
+# Alt + Left / Right for terminals that send CSI sequences
 bindkey "^[[1;3D" backward-word
 bindkey "^[[1;3C" forward-word
 
-# Home / End (common terminal sequences)
+# Home / End
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
-
-# Also handle some terminals/keyboards that send these variants
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 bindkey "^[[7~" beginning-of-line
 bindkey "^[[8~" end-of-line
 
-# Forward Delete key
-bindkey "^[[3;3~" kill-word
-
-# Alt + Backspace (common)
+# Alt + Backspace
 bindkey '^[^?' backward-kill-word
-
-# Some terminals send this
 bindkey '^[\x7f' backward-kill-word
-
-# Another variation
-bindkey '^H' backward-delete-char
 
 
 export EDITOR="nvim"
@@ -38,8 +32,6 @@ autoload -Uz compinit bashcompinit
 compinit
 bashcompinit
 
-autoload -U select-word-style
-select-word-style bash
 
 # ---- Core CLI integrations ----
 

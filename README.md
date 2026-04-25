@@ -31,6 +31,12 @@ Initialize and apply this repo:
 chezmoi init --apply git@github.com:jose-oc/dotfiles.git
 ```
 
+Install brew packages:
+
+```bash
+brew bundle install --file="$HOME/Brewfile"
+```
+
 ### Daily workflow
 
 Check for differences between the source state and the home directory:
@@ -95,5 +101,11 @@ git commit -m "Update dotfiles"
 git push
 ```
 
+or from any directory using `chezmoi` cli:
 
-
+```bash
+chezmoi git status
+chezmoi git add .
+chezmoi git commit
+chezmoi git push
+```

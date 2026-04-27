@@ -59,10 +59,10 @@ if (( ${+commands[bat]} )); then
 fi
 
 if (( ${+commands[eza]} )); then
-  alias ls='eza --icons'
-  alias ll='eza --long --header --git --icons'
-  alias la='eza --long --header --git --icons --all'
-  alias tree='eza --tree --level=3 --icons'
+  alias ls='eza --icons=always'
+  alias ll='eza --long --header --git --icons=always'
+  alias la='eza --long --header --git --icons=always --all'
+  alias tree='eza --tree --level=3 --icons=always'
 fi
 
 if (( ${+commands[rg]} )); then

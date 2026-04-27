@@ -4,6 +4,8 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
+alias grep="grep --color"
+
 alias k="kubectl"
 alias kgp="kubectl get pods"
 alias kgs="kubectl get services"

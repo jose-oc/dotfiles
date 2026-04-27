@@ -1,0 +1,5 @@
+{
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'MesloLGS Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontFamily": "'MesloLGS Nerd Font'",
+    "editor.fontLigatures": true
+}

@@ -1,0 +1,9 @@
+# Set the primary font
+font-family = MesloLGS Nerd Font
+
+# Set the size
+#font-size = 13
+
+# You can even set specific fallback fonts if you want
+font-family = JetBrainsMono Nerd Font
+

@@ -1,3 +1,9 @@
+# New tabs will open in your home directory rather than the current path
+tab-inherit-working-directory = false
+
+# New splits will automatically start in the same directory as the active pane
+split-inherit-working-directory = true
+
 # Set the primary font
 font-family = MesloLGS Nerd Font
 
@@ -7,3 +13,8 @@ font-family = MesloLGS Nerd Font
 # You can even set specific fallback fonts if you want
 font-family = JetBrainsMono Nerd Font
 
+# Dim inactive splits to make the active one pop
+unfocused-split-opacity = 0.5
+
+# Optional: Adjust the thickness of the split divider
+split-divider-color = "#88C6F2"

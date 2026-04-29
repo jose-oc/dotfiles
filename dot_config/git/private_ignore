@@ -18,7 +18,7 @@ ehthumbs_vista.db
 .venv/
 phpunit.phar
 .direnv/
-.envrc
+#.envrc
 
 # AI
 WARP.md

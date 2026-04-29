@@ -28,10 +28,12 @@ brew "zoxide"
 # Work-only (Kubernetes stack)
 {{ if eq .profile "work" }}
 brew "helm@3", link: true
+brew "influxdb-cli"
 brew "kubectx"
 brew "kubernetes-cli"
 brew "terraform-ls"
 brew "lima"
+brew "logcli"
 brew "derailed/k9s/k9s"
 cask "1password-cli"
 cask "freelens"

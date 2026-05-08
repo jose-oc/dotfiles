@@ -6,6 +6,9 @@ alias ....="cd ../../.."
 
 alias grep="grep --color"
 
+alias gsm="git switch main"
+alias gl="git pull"
+
 alias k="kubectl"
 alias kgp="kubectl get pods"
 alias kgs="kubectl get services"

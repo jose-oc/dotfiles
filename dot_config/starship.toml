@@ -81,6 +81,9 @@ symbol = " "
 
 [gcloud]
 symbol = "󱇶 "
+format = 'on [$symbol$account(@$project)(\($region\))]($style) '
+[gcloud.region_aliases]
+europe-west4 = 'eu-w4'
 
 [gleam]
 symbol = " "

@@ -17,8 +17,11 @@ font-family = JetBrainsMono Nerd Font
 unfocused-split-opacity = 0.5
 
 # Optional: Adjust the thickness of the split divider
-split-divider-color = "#88C6F2"
+split-divider-color = "#88f28f"
 
+
+# Keep a larger explicit scrollback buffer than the default
+scrollback-limit = 50000000
 
 # For SSH sessions, try to install Ghostty terminfo on the remote and use
 # a compatibility fallback when the remote host does not support xterm-ghostty.

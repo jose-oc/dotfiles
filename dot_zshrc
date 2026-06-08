@@ -95,3 +95,7 @@ setopt HIST_EXPIRE_DUPS_FIRST
 if (( ${+commands[starship]} )); then
   eval "$(starship init zsh)"
 fi
+
+# Added by Antigravity IDE
+export PATH="/Users/jose/.antigravity-ide/antigravity-ide/bin:$PATH"
+

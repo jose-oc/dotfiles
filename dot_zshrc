@@ -99,3 +99,11 @@ fi
 # Added by Antigravity IDE
 export PATH="/Users/jose/.antigravity-ide/antigravity-ide/bin:$PATH"
 
+# bun was installed manually (not with Brew)
+# bun completions
+[ -s "/Users/jose/.bun/_bun" ] && source "/Users/jose/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+

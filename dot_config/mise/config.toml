@@ -1,0 +1,19 @@
+[tools]
+kubectl = "1.33"
+talosctl = "1.10"
+
+[settings]
+pin = false
+paranoid = false
+lockfile = true
+locked_verify_provenance = true
+minimum_release_age = "7d"
+provenance_api_failures_fatal = true
+trusted_config_paths = [
+  "/Users/jose/code",
+]
+aqua.cosign = true
+aqua.github_attestations = true
+aqua.minisign = true
+aqua.slsa = true
+

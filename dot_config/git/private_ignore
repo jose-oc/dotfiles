@@ -25,6 +25,7 @@ WARP.md
 QWEN.md
 GEMINI.md
 AGENTS.md
+AGENTS-*.md
 .rooignore
 .geminiignore
 

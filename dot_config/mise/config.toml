@@ -1,6 +1,6 @@
 [tools]
 kubectl = "1.33"
-talosctl = "1.10"
+talosctl = "1.13.10"
 
 [settings]
 pin = false

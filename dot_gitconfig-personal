@@ -1,0 +1,7 @@
+[user]
+    name = Jose Ortiz
+    email = jose.oc@gmail.com
+
+[core]
+    sshCommand = ssh -i ~/.ssh/id_ed25519_jose -o IdentitiesOnly=yes
+

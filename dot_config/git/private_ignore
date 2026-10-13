@@ -28,4 +28,5 @@ AGENTS.md
 AGENTS-*.md
 .rooignore
 .geminiignore
+.codex/environments/environment.toml
 

@@ -1,6 +1,9 @@
 [tools]
 kubectl = "1.33"
+python = "3.14"
 talosctl = "1.13.10"
+uv = "0.13"
+yq = "4.54"
 
 [settings]
 pin = false

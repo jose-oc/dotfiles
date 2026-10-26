@@ -1,3 +1,4 @@
+brew "age"
 brew "awscli"
 brew "bash-language-server"
 brew "bat"
@@ -26,7 +27,6 @@ brew "rsync"
 brew "starship"
 brew "stylua"
 brew "termsvg"
-brew "uv"
 brew "yaml-language-server"
 brew "yt-dlp"
 brew "zoxide"
@@ -46,7 +46,9 @@ cask "freelens"
 cask "gcloud-cli"
 
 # Equivalent to `uv tool install --python 3.14 --with-executables-from ansible-core,ansible-lint ansible`
-uv "ansible", with: ["ansible-core", "ansible-lint"]
+# brew "uv"
+# uv "ansible", with: ["ansible-core", "ansible-lint"]
+# Instead of installing here, use `mise`: `mise use --global uv@0.13` to install uv and install `ansible` with python
 {{ end }}
 
 {{ if eq .profile "personal" }}
